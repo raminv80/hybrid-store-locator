@@ -140,7 +140,7 @@ function HybridStoreLocator(options){
             });
 
             google.maps.event.addListener(marker, 'click', function(){
-                infowindow.open(store_locator_map, marker);
+                infowindow.open(that.map, marker);
             });
 
             return marker;
