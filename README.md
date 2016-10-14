@@ -1,5 +1,7 @@
 #Hybrid Store Locator
 
+Demo: https://raminv80.github.io/hybrid-store-locator/
+
 This is a jquery based store locator.
 Features:
 
