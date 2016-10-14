@@ -1,0 +1,23 @@
+{
+  "name": "hybrid-store-locator",
+  "description": "A simple store locator with clustered google map markers, paginated listing and state based filter.",
+  "main": "dist/main.js",
+  "authors": [
+    "Ramin Vakilian <ramin@hybridmarketing.com.au>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "store",
+    "locator",
+    "google",
+    "map"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Hybrid Store Locator</title>
+        <meta name="description"
+              content="Croser presents the pinnacle of vintage, coming from a simple moment of inspiration and has remained almost unchanged from vintage to vintage, in shape and meaning.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+        <meta property="og:title" content="Croser" />
+        <meta property="og:image" content="http://croser.stage.byhybrid.com.au/images/og-croser.jpg" />
+        <meta property="og:image:width" content="158" />
+        <meta property="og:image:height" content="237" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="dist/css/styles.css">
+    </head>
+    <body class="parallax-enabled">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="main-wrapper">
+            <div class="site-container">
+                    <div>
+                        <div id="hsl_gmap_canvas"></div>
+                        <div>
+                            <p>Browse our stores by state</p>
+                            <div class="buttons states" id="hsl-state-selector">
+                                <button data-state="ACT">ACT</button>
+                                <button data-state="NSW">NSW</button>
+                                <button data-state="QLD">QLD</button>
+                                <button data-state="WA">WA</button>
+                                <button data-state="VIC">VIC</button>
+                                <button data-state="NT">NT</button>
+                                <button data-state="SA">SA</button>
+                            </div>
+                            <ul class="addresses" id="hsl-address-list"></ul>
+                            <ul id="hsl-address-pagination" class="address-pagination"></ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc9-uuB1cZ5jXKFLCo9gUq9ACc9WVECPI&v=3.exp"></script>
+        <script src="dist/js/hybrid-store-locator.min.js"></script>
+        <script type="text/javascript">
+        var hsl = new HybridStoreLocator({
+            mapId: 'hsl_gmap_canvas',
+            listId: 'hsl-address-list',
+            paginationId: 'hsl-address-pagination',
+            selectorId: 'hsl-state-selector',
+            zoom: 4,
+            centerLat: -26.372185,
+            centerLng: -225.860597,
+            paginationItemsPerPage: 3,
+            paginationLength: 3,
+            storesUrl: 'dist/stores.json'
+        });
+        google.maps.event.addDomListener(window, 'load', hsl.init());
+        </script>
+    </body>
+</html>
